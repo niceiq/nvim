@@ -46,3 +46,5 @@ local options = {
 for k, v in pairs(options) do
 	o[k] = v
 end
+
+vim.cmd [[set iskeyword+=-]]

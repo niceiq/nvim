@@ -122,6 +122,11 @@ _G.packer_plugins = {
     path = "/home/iq/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-lsp"] = {
+    loaded = true,
+    path = "/home/iq/.local/share/nvim/site/pack/packer/start/nvim-lsp",
+    url = "https://github.com/nvim/nvim-lsp"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/home/iq/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
