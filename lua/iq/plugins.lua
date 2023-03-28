@@ -44,6 +44,7 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions use by lots of plugins
+
   use "numToStr/Comment.nvim" -- Comment toggler
 
   -- Markdown 
@@ -75,6 +76,9 @@ return packer.startup(function(use)
 
   use "nvim-telescope/telescope.nvim" -- Extensible fuzzy-finder
   use "nvim-telescope/telescope-media-files.nvim" -- View media files is Telescope
+
+  use "akinsho/bufferline.nvim" -- better buffers
+  use "moll/vim-bbye" -- allows you to delete buffers
 
   -- LSP
   use {"VonHeikemen/lsp-zero.nvim"}

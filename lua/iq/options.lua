@@ -13,6 +13,7 @@ local options = {
   hlsearch = false,                         -- highlight all matches on previous search pattern
   ignorecase = true,                       -- ignore case in search patterns
   mouse = "a",                             -- allow the mouse to be used in neovim
+  mousemoveevent = true,                   -- Useful for bufferline
   pumheight = 10,                          -- pop up menu height
   showtabline = 0,                         -- always show tabs
   smartcase = true,                        -- smart case
