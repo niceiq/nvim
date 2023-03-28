@@ -61,6 +61,8 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lsp" -- adds LSP completion
   use "saadparwaiz1/cmp_luasnip" -- adds snippet completion
 
+  use "windwp/nvim-autopairs" -- autopairs, integrates with cmp
+
   -- snippets
   use "L3MON4D3/LuaSnip" -- snippet engine
   use "rafamadriz/friendly-snippets" -- lots of community snippets
