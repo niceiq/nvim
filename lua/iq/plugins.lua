@@ -51,6 +51,8 @@ return packer.startup(function(use)
   -- Colorschemes
   use "sainnhe/everforest"
 
+  use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"} -- Syntax Highlighting
+
   -- Completion
   use "hrsh7th/nvim-cmp" -- completion plugin
   use "hrsh7th/cmp-buffer" -- adds buffer completion
@@ -68,6 +70,7 @@ return packer.startup(function(use)
   use "nvim-tree/nvim-web-devicons"
 
   use "nvim-telescope/telescope.nvim" -- Extensible fuzzy-finder
+  use "nvim-telescope/telescope-media-files.nvim" -- View media files is Telescope
 
   -- LSP
   use {"VonHeikemen/lsp-zero.nvim"}
