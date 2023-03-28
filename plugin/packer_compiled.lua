@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  everforest = {
+    loaded = true,
+    path = "/home/iq/.local/share/nvim/site/pack/packer/start/everforest",
+    url = "https://github.com/sainnhe/everforest"
+  },
   ["markdown-preview.nvim"] = {
     commands = { "MarkdownPreview" },
     loaded = false,

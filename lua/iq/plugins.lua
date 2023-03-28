@@ -48,7 +48,8 @@ return packer.startup(function(use)
   -- Markdown 
   use {"iamcco/markdown-preview.nvim", run = 'cd app && npm install', cmd = 'MarkdownPreview'}
   
-  
+  -- Colorschemes
+  use "sainnhe/everforest"
 
 
   -- Automatically set up your configuration after cloning packer.nvim
