@@ -56,7 +56,8 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-buffer" -- adds buffer completion
   use "hrsh7th/cmp-path" -- add path completion
   use "hrsh7th/cmp-cmdline" -- adds command line completion
-  use "saadparwaiz1/cmp_luasnip" -- adds snippet completionS
+  use "hrsh7th/cmp-nvim-lsp" -- adds LSP completion
+  use "saadparwaiz1/cmp_luasnip" -- adds snippet completion
 
   -- snippets
   use "L3MON4D3/LuaSnip" -- snippet engine
@@ -67,7 +68,10 @@ return packer.startup(function(use)
   use "nvim-tree/nvim-web-devicons"
 
   -- LSP
-  use "nvim/nvim-lsp"
+  use {"VonHeikemen/lsp-zero.nvim"}
+  use {"williamboman/mason.nvim", run = ":MasonUpdate"} -- LSP Installer
+  use "williamboman/mason-lspconfig.nvim"
+  use "neovim/nvim-lspconfig" -- This enables LSP
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
