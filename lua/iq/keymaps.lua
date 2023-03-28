@@ -27,7 +27,9 @@ keymap("n", "<m-l>", "<C-w>l", opts)
 
 
 -- Explorer Window
+-- Only have one of them active
 keymap("n", "<leader>e", ":Lex 30<cr>", opts) -- Shows 30px left explorer window 
+keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts) -- Toggles NvimTree
 
 -- Resize with arrows
 keymap("n", "<C-Up>", "resize +2<cr>", opts)
