@@ -85,6 +85,7 @@ return packer.startup(function(use)
   use {"williamboman/mason.nvim", run = ":MasonUpdate"} -- LSP Installer
   use "williamboman/mason-lspconfig.nvim"
   use "neovim/nvim-lspconfig" -- This enables LSP
+  use "jose-elias-alvarez/null-ls.nvim" -- Local diagnostics & formatting
 
   -- Git
   use "lewis6991/gitsigns.nvim" -- Powerful git plugin
