@@ -67,6 +67,8 @@ return packer.startup(function(use)
   use "nvim-tree/nvim-tree.lua"
   use "nvim-tree/nvim-web-devicons"
 
+  use "nvim-telescope/telescope.nvim" -- Extensible fuzzy-finder
+
   -- LSP
   use {"VonHeikemen/lsp-zero.nvim"}
   use {"williamboman/mason.nvim", run = ":MasonUpdate"} -- LSP Installer

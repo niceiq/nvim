@@ -1,4 +1,21 @@
-local lsp = require('lsp-zero').preset({
+-- Avoid errors if lsp-zero is not found
+local lsp_status_ok, lsp = pcall(require, "lsp-zero")
+if not lsp_status_ok then
+  return
+end
+
+local cmp_status_ok, cmp = pcall(require, "cmp")
+if not cmp_status_ok then
+  return
+end
+
+local cmp_action_status_ok, cmp_action = pcall(require, "lsp-zero")
+if not cmp_action_status_ok then
+  return
+end
+
+
+lsp.preset({
   name = 'minimal',
   set_lsp_keymaps = true,
   manage_nvim_cmp = true,
@@ -15,8 +32,7 @@ lsp.ensure_installed({
 })
 
 -- Autocompletion Bindings --
-local cmp = require('cmp')
-local cmp_action = require('lsp-zero').cmp_action()
+cmp_action.cmp_action()
 
 lsp.setup_nvim_cmp({
   mapping = cmp.mapping.preset.insert({})
