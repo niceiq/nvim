@@ -36,4 +36,12 @@ require'nvim-treesitter.configs'.setup {
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
   },
+  autopairs = {
+    enable = true,
+  },
+  -- ts-context-commentstring plugin logic
+  context_commentstring = {
+    enable = true,
+    enable_autocmd = false,
+  },
 }
