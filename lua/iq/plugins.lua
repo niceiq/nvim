@@ -46,7 +46,6 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions use by lots of plugins
   use "numToStr/Comment.nvim" -- Comment toggler
 
-
   -- Markdown 
   use {"iamcco/markdown-preview.nvim", run = 'cd app && npm install', cmd = 'MarkdownPreview'}
 
@@ -82,6 +81,9 @@ return packer.startup(function(use)
   use {"williamboman/mason.nvim", run = ":MasonUpdate"} -- LSP Installer
   use "williamboman/mason-lspconfig.nvim"
   use "neovim/nvim-lspconfig" -- This enables LSP
+
+  -- Git
+  use "lewis6991/gitsigns.nvim" -- Powerful git plugin
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
