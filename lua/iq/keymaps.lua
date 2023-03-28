@@ -1,0 +1,55 @@
+-- keymap option parameters 
+local opts = {noremap = true, silent = true}
+local term_opts = {silent = true}
+
+-- Shorten function names
+local keymap = vim.api.nvim_set_keymap
+
+-- Remap space as leader key
+keymap("n", "<Space>", "",opts)
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+-- Modes
+--  normal_mode = "n",
+--  insert_mode = "i",
+--  visual_mode = "v",
+--  visual_block_mode = "x",
+--  term_mode = "t",
+--  command_mode = "c",
+
+-- Normal --
+-- Better window navigation
+keymap("n", "<m-h>", "<C-w>h", opts)
+keymap("n", "<m-j>", "<C-w>j", opts)
+keymap("n", "<m-k>", "<C-w>k", opts)
+keymap("n", "<m-l>", "<C-w>l", opts)
+
+
+-- Explorer Window
+keymap("n", "<leader>e", ":Lex 30<cr>", opts) -- Shows 30px left explorer window 
+
+-- Resize with arrows
+keymap("n", "<C-Up>", "resize +2<cr>", opts)
+keymap("n", "<C-Down>", "resize -2<cr>", opts)
+keymap("n", "<C-Left>", "vertical resize -2<cr>", opts)
+keymap("n", "<C-Right>", "vertical resize +2<cr>", opts)
+
+-- Navigate buffers
+keymap("n", "<S-l>", ":bnext<cr>", opts) -- goes to the next buffer
+keymap("n", "<S-h>", ":bprevious<cr>", opts) -- goes to the previous buffer
+
+-- Visual Mode -- 
+-- Stay in indent mode
+keymap("v", "<", "<gv", opts)
+keymap("v", ">", ">gv", opts)
+
+-- Better yank & paste
+keymap("v", "p", '"_dP', opts)
+
+-- Terminal --
+-- Better terminal navigation
+keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
+keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
+keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
+keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
