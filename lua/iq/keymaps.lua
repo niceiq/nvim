@@ -1,12 +1,12 @@
--- keymap option parameters 
-local opts = {noremap = true, silent = true}
-local term_opts = {silent = true}
+-- keymap option parameters
+local opts = { noremap = true, silent = true }
+local term_opts = { silent = true }
 
 -- Shorten function names
 local keymap = vim.api.nvim_set_keymap
 
 -- Remap space as leader key
-keymap("n", "<Space>", "",opts)
+keymap("n", "<Space>", "", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -25,10 +25,9 @@ keymap("n", "<m-j>", "<C-w>j", opts)
 keymap("n", "<m-k>", "<C-w>k", opts)
 keymap("n", "<m-l>", "<C-w>l", opts)
 
-
 -- Explorer Window
 -- Only have one of them active
-keymap("n", "<leader>e", ":Lex 30<cr>", opts) -- Shows 30px left explorer window 
+keymap("n", "<leader>e", ":Lex 30<cr>", opts) -- Shows 30px left explorer window
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts) -- Toggles NvimTree
 
 -- Resize with arrows
@@ -41,7 +40,10 @@ keymap("n", "<C-Right>", "vertical resize +2<cr>", opts)
 keymap("n", "<S-l>", ":bnext<cr>", opts) -- goes to the next buffer
 keymap("n", "<S-h>", ":bprevious<cr>", opts) -- goes to the previous buffer
 
--- Visual Mode -- 
+-- Formatting
+keymap("n", "<m-f>", ":lua vim.lsp.buf.format()<cr>", opts) -- Uses null-ls to format
+
+-- Visual Mode --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
