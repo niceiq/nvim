@@ -39,6 +39,7 @@ keymap("n", "<C-Right>", "vertical resize +2<cr>", opts)
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<cr>", opts) -- goes to the next buffer
 keymap("n", "<S-h>", ":bprevious<cr>", opts) -- goes to the previous buffer
+keymap("n", "<leader>d", ":Bdelete<cr>", opts) -- Quits the current buffer
 
 -- Formatting
 keymap("n", "<m-f>", ":lua vim.lsp.buf.format()<cr>", opts) -- Uses null-ls to format
