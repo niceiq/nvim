@@ -49,7 +49,11 @@ return packer.startup(function(use)
 	use("akinsho/toggleterm.nvim") -- Neovim terminal toggler
 
 	-- Markdown
-	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", cmd = "MarkdownPreview" })
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+
+  -- Note-taking
+  use("mickael-menu/zk-nvim") -- Integreates zk with Neovim
+
 
 	-- Colorschemes
 	use("sainnhe/everforest")
