@@ -54,9 +54,9 @@ return packer.startup(function(use)
   -- Note-taking
   use("mickael-menu/zk-nvim") -- Integreates zk with Neovim
 
-
 	-- Colorschemes
-	use("sainnhe/everforest")
+  use("sainnhe/everforest")
+  use("sainnhe/gruvbox-material")
 
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) -- Syntax Highlighting
 	use("JoosepAlviste/nvim-ts-context-commentstring") -- Better comments for JS
@@ -94,6 +94,7 @@ return packer.startup(function(use)
 
 	-- Git
 	use("lewis6991/gitsigns.nvim") -- Powerful git plugin
+  use("weizheheng/nvim-workbench") -- Branch specific notes
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
