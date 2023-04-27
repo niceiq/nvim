@@ -55,7 +55,8 @@ return packer.startup(function(use)
   use("mickael-menu/zk-nvim") -- Integreates zk with Neovim
 
 	-- Colorschemes
-  use("sainnhe/everforest")
+  -- use("sainnhe/everforest")
+  use("neanias/everforest-nvim") -- Lua port
   use("sainnhe/gruvbox-material")
 
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) -- Syntax Highlighting
