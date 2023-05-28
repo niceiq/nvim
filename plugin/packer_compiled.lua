@@ -129,10 +129,20 @@ _G.packer_plugins = {
     path = "/home/iq/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["goyo.vim"] = {
+    loaded = true,
+    path = "/home/iq/.local/share/nvim/site/pack/packer/start/goyo.vim",
+    url = "https://github.com/junegunn/goyo.vim"
+  },
   ["gruvbox-material"] = {
     loaded = true,
     path = "/home/iq/.local/share/nvim/site/pack/packer/start/gruvbox-material",
     url = "https://github.com/sainnhe/gruvbox-material"
+  },
+  ["headlines.nvim"] = {
+    loaded = true,
+    path = "/home/iq/.local/share/nvim/site/pack/packer/start/headlines.nvim",
+    url = "https://github.com/lukas-reineke/headlines.nvim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,

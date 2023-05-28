@@ -47,9 +47,11 @@ return packer.startup(function(use)
 
 	use("numToStr/Comment.nvim") -- Comment toggler
 	use("akinsho/toggleterm.nvim") -- Neovim terminal toggler
+  use("junegunn/goyo.vim") -- Vim Focus
 
 	-- Markdown
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+  use("lukas-reineke/headlines.nvim") -- Headline Highlighting
 
   -- Note-taking
   use("mickael-menu/zk-nvim") -- Integreates zk with Neovim

@@ -26,6 +26,27 @@ end
 -- utils.notify.info = notify_level(vim.log.levels.INFO)
 -- utils.notify.debug = notify_level(vim.log.levels.DEBUG)
 
+local function on_attach(bufnr)
+  local api = require('nvim-tree.api')
+
+  local function opts(desc)
+    return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+  end
+
+
+  -- Default mappings.
+   api.config.mappings.default_on_attach(bufnr)
+
+  -- Mappings migrated from view.mappings.list
+  --
+  -- You will need to insert "your code goes here" for any mappings with a custom action_cb
+  vim.keymap.set('n', 'l', api.node.open.edit, opts('Open'))
+  vim.keymap.set('n', '<CR>', api.node.open.edit, opts('Open'))
+  vim.keymap.set('n', 'o', api.node.open.edit, opts('Open'))
+  vim.keymap.set('n', 'h', api.node.navigate.parent_close, opts('Close Directory'))
+  vim.keymap.set('n', 'v', api.node.open.vertical, opts('Open: Vertical Split'))
+
+end
 nvim_tree.setup({
 	hijack_directories = {
 		enable = false,
@@ -134,14 +155,6 @@ nvim_tree.setup({
 		hide_root_folder = false,
 		side = "left",
 		-- auto_resize = true,
-		mappings = {
-			custom_only = false,
-			list = {
-				{ key = { "l", "<CR>", "o" }, cb = tree_cb("edit") },
-				{ key = "h", cb = tree_cb("close_node") },
-				{ key = "v", cb = tree_cb("vsplit") },
-			},
-		},
 		number = false,
 		relativenumber = false,
 	},
