@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/iq/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["autolist.nvim"] = {
+    loaded = true,
+    path = "/home/iq/.local/share/nvim/site/pack/packer/start/autolist.nvim",
+    url = "https://github.com/gaoDean/autolist.nvim"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/home/iq/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
