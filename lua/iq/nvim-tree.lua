@@ -3,15 +3,6 @@ if not status_ok then
 	return
 end
 
-local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
-if not config_status_ok then
-	return
-end
-
-local tree_cb = nvim_tree_config.nvim_tree_callback
-
-local utils = require("nvim-tree.utils")
-
 ---@diagnostic disable-next-line: unused-local
 local function notify_level(level)
 	return function(msg)
@@ -54,7 +45,7 @@ nvim_tree.setup({
 	-- update_to_buf_dir = {
 	--   enable = false,
 	-- },
-	disable_netrw = true,
+	disable_netrw = false,
 	hijack_netrw = true,
 	filters = {
 		custom = { ".git" },

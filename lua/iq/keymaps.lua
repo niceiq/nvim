@@ -64,3 +64,5 @@ keymap("n", "<leader>ff", ":Telescope find_files<cr>", opts)
 keymap("n", "<leader>ft", ":Telescope live_grep<cr>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<cr>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<cr>", opts)
+
+-- autolist -- 

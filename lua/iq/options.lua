@@ -1,6 +1,7 @@
 -- To get help type :
 --	:help [option_name]
 
+-- shortening syntax --
 local o = vim.opt
 
 local options = {
