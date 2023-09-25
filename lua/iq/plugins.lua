@@ -47,19 +47,26 @@ return packer.startup(function(use)
 
 	use("numToStr/Comment.nvim") -- Comment toggler
 	use("akinsho/toggleterm.nvim") -- Neovim terminal toggler
-  use("junegunn/goyo.vim") -- Vim Focus
+	use("junegunn/goyo.vim") -- Vim Focus
 
 	-- Markdown
-  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
-  use("lukas-reineke/headlines.nvim") -- Headline Highlighting
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = "cd app && npm install",
+		setup = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	})
+	use("lukas-reineke/headlines.nvim") -- Headline Highlighting
 
-  -- Note-taking
-  use("mickael-menu/zk-nvim") -- Integreates zk with Neovim
+	-- Note-taking
+	use("mickael-menu/zk-nvim") -- Integreates zk with Neovim
 
 	-- Colorschemes
-  -- use("sainnhe/everforest")
-  use("neanias/everforest-nvim") -- Lua port
-  use("sainnhe/gruvbox-material")
+	-- use("sainnhe/everforest")
+	use("neanias/everforest-nvim") -- Lua port
+	use("sainnhe/gruvbox-material")
 
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) -- Syntax Highlighting
 	use("JoosepAlviste/nvim-ts-context-commentstring") -- Better comments for JS
@@ -71,7 +78,7 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-cmdline") -- adds command line completion
 	use("hrsh7th/cmp-nvim-lsp") -- adds LSP completion
 	use("saadparwaiz1/cmp_luasnip") -- adds snippet completion
-  use("gaoDean/autolist.nvim") -- autocompletes lists 
+	use("gaoDean/autolist.nvim") -- autocompletes lists
 
 	use("windwp/nvim-autopairs") -- autopairs, integrates with cmp
 
@@ -96,9 +103,14 @@ return packer.startup(function(use)
 	use("neovim/nvim-lspconfig") -- This enables LSP
 	use("jose-elias-alvarez/null-ls.nvim") -- Local diagnostics & formatting
 
+	-- Debugging
+	use("https://github.com/mfussenegger/nvim-dap") -- Debugger
+	use("https://github.com/rcarriga/nvim-dap-ui") -- Debugger UI
+	use("https://github.com/jay-babu/mason-nvim-dap.nvim") -- Links Mason to DAP
+
 	-- Git
 	use("lewis6991/gitsigns.nvim") -- Powerful git plugin
-  -- use("weizheheng/nvim-workbench") -- Branch specific notes
+	-- use("weizheheng/nvim-workbench") -- Branch specific notes
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

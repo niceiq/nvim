@@ -39,10 +39,18 @@ keymap("n", "<C-Right>", "vertical resize +2<cr>", opts)
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<cr>", opts) -- goes to the next buffer
 keymap("n", "<S-h>", ":bprevious<cr>", opts) -- goes to the previous buffer
-keymap("n", "<leader>d", ":Bdelete<cr>", opts) -- Quits the current buffer
+keymap("n", "<leader>D", ":Bdelete<cr>", opts) -- Quits the current buffer
 
 -- Formatting
-keymap("n", "<m-f>", ":lua vim.lsp.buf.format()<cr>", opts) -- Uses null-ls to format
+keymap("n", "<m-f>", ":lua vim.lsp.buf.format()<cr>", opts) -- uses null-ls to format
+
+-- Debugging
+keymap("n", "<leader>bp", ":DapToggleBreakpoint<cr>", opts) -- toggles breakpoint
+keymap("n", "<leader>dr", ":DapContinue<cr>", opts) -- starts or continue debugger
+keymap("n", "<leader>dn", ":DapStepOver<cr>", opts) -- step over
+keymap("n", "<leader>di", ":DapStepInto<cr>", opts) -- step into
+keymap("n", "<leader>do", ":DapStepOut<cr>", opts) -- step out
+keymap("n", "<leader>do", ":DapStepOut<cr>", opts) -- step out
 
 -- Visual Mode --
 -- Stay in indent mode
@@ -65,4 +73,4 @@ keymap("n", "<leader>ft", ":Telescope live_grep<cr>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<cr>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<cr>", opts)
 
--- autolist -- 
+-- autolist --
