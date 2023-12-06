@@ -12,10 +12,6 @@ local function notify_level(level)
 	end
 end
 
--- utils.notify.warn = notify_level(vim.log.levels.WARN)
--- utils.notify.error = notify_level(vim.log.levels.ERROR)
--- utils.notify.info = notify_level(vim.log.levels.INFO)
--- utils.notify.debug = notify_level(vim.log.levels.DEBUG)
 
 local function on_attach(bufnr)
   local api = require('nvim-tree.api')
@@ -38,9 +34,10 @@ local function on_attach(bufnr)
   vim.keymap.set('n', 'v', api.node.open.vertical, opts('Open: Vertical Split'))
 
 end
+
 nvim_tree.setup({
 	hijack_directories = {
-		enable = false,
+		enable = true,
 	},
 	-- update_to_buf_dir = {
 	--   enable = false,
@@ -143,10 +140,10 @@ nvim_tree.setup({
 	view = {
 		width = 30,
 		--height = 30,
-		hide_root_folder = false,
 		side = "left",
 		-- auto_resize = true,
 		number = false,
 		relativenumber = false,
 	},
 })
+

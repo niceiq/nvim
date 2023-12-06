@@ -50,7 +50,7 @@ keymap("n", "<leader>dr", ":DapContinue<cr>", opts) -- starts or continue debugg
 keymap("n", "<leader>dn", ":DapStepOver<cr>", opts) -- step over
 keymap("n", "<leader>di", ":DapStepInto<cr>", opts) -- step into
 keymap("n", "<leader>do", ":DapStepOut<cr>", opts) -- step out
-keymap("n", "<leader>do", ":DapStepOut<cr>", opts) -- step out
+keymap("n", "<leader>de", ":DapTerminate<cr>", opts) -- terminate
 
 -- Visual Mode --
 -- Stay in indent mode

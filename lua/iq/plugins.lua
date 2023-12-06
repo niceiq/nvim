@@ -69,7 +69,10 @@ return packer.startup(function(use)
 	use("sainnhe/gruvbox-material")
 
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) -- Syntax Highlighting
+  use("cbarrete/tree-sitter-ledger") -- Ledger parser for treesitter
 	use("JoosepAlviste/nvim-ts-context-commentstring") -- Better comments for JS
+  -- use("norcalli/nvim-colorizer.lua") -- Hexadecimal colorizer
+
 
 	-- Completion
 	use("hrsh7th/nvim-cmp") -- completion plugin

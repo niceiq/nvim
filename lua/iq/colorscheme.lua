@@ -1,6 +1,7 @@
 local colorscheme = "gruvbox-material"
 
 -- Gruvbox-material things
+vim.cmd([[set background=light]])
 vim.cmd([[let g:gruvbox_material_background = 'soft']])
 vim.cmd([[let g:gruvbox_matirial_foreground = 'mix']])
 vim.cmd([[let g:gruvbox_material_spell_foreground = 'colored']])

@@ -256,6 +256,11 @@ _G.packer_plugins = {
     path = "/home/iq/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
+  ["tree-sitter-ledger"] = {
+    loaded = true,
+    path = "/home/iq/.local/share/nvim/site/pack/packer/start/tree-sitter-ledger",
+    url = "https://github.com/cbarrete/tree-sitter-ledger"
+  },
   ["vim-bbye"] = {
     loaded = true,
     path = "/home/iq/.local/share/nvim/site/pack/packer/start/vim-bbye",
