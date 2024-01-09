@@ -50,3 +50,4 @@ for k, v in pairs(options) do
 end
 
 vim.cmd([[set iskeyword+=-]])
+vim.g.skip_ts_context_commentstring_module = true -- needed for context-commentstring
