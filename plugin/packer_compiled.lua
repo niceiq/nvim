@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/iq/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
     url = "https://github.com/hrsh7th/cmp-cmdline"
   },
+  ["cmp-hledger"] = {
+    loaded = true,
+    path = "/home/iq/.local/share/nvim/site/pack/packer/start/cmp-hledger",
+    url = "https://github.com/kirasok/cmp-hledger"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/iq/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",

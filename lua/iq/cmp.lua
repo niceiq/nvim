@@ -139,6 +139,7 @@ cmp.setup({
 		{ name = "buffer" },
 		{ name = "path", group_index = 2 },
 		{ name = "emoji", group_index = 2 },
+    { name = "hledger"},
 	},
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,

@@ -82,6 +82,7 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-nvim-lsp") -- adds LSP completion
 	use("saadparwaiz1/cmp_luasnip") -- adds snippet completion
 	use("gaoDean/autolist.nvim") -- autocompletes lists
+  use('kirasok/cmp-hledger') -- completion for hledger
 
 	use("windwp/nvim-autopairs") -- autopairs, integrates with cmp
 
